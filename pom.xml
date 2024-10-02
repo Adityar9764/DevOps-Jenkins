@@ -1,0 +1,46 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+    <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging>
+    <name>Exp6 maven webapp</name>
+    <url>http://maven.apache.org</url>
+
+    <properties>
+        <maven.complier.source>17</maven.complier.source>
+        <maven.complier.target>17</maven.complier.target>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>Exp6WebAppexample</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.2</version>
+                <configuration>
+                    <url>http://localhost:9999/manager/text</url>
+                    <server>TomcatServer</server>
+                    <path>/Exp6WebAppexample</path>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
+
+</project>
